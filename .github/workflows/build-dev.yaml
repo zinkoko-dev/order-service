@@ -36,12 +36,12 @@ jobs:
           file: ./deployment/Dockerfile.dev
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: ghcr.io/zawthanoo/order-service:${{ steps.tag-version.outputs.version }}
+          tags: ghcr.io/zinkoko-dev/order-service:${{ steps.tag-version.outputs.version }}
 
       - name: Checkout Kustomize chart Repository
         uses: actions/checkout@v3
         with:
-          repository: zawthanoo/workshop-apps
+          repository: zinkoko-dev/workshop-apps
           path: deployment
           token: ${{ secrets.MY_GITHUB_TOKEN }}
 
